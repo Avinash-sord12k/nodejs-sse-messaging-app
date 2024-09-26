@@ -16,7 +16,6 @@ messageForm.addEventListener('submit', sendMessage);
 // Function to register a new user
 async function register(e) {
   e.preventDefault();
-  console.log(e.target);
   const username = regForm.elements['register-username'].value;
   const password = regForm.elements['register-password'].value;
 

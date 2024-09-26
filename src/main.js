@@ -1,12 +1,13 @@
-import express from 'express';
-import { graphqlHTTP } from 'express-graphql';
-import mongoose from 'mongoose';
-import cors from 'cors';
-import { buildSchema } from 'graphql';
 import { MessageModel } from './models/message.js';
+import { graphqlHTTP } from 'express-graphql';
 import { UserModel } from './models/user.js';
-import path from 'path';
+import { buildSchema } from 'graphql';
 import { fileURLToPath } from 'url';
+import mongoose from 'mongoose';
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import 'dotenv/config';
 
 const app = express();
 app.use(
@@ -132,7 +133,7 @@ const root = {
 };
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/sse-chat');
+mongoose.connect(process.env.DB_URI);
 
 // GraphQL Middleware
 app.use(
