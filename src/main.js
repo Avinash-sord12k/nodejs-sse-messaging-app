@@ -133,7 +133,10 @@ const root = {
 };
 
 // Connect to MongoDB
-mongoose.connect(process.env.DB_URI);
+mongoose
+  .connect(process.env.DB_URI)
+  .then(() => console.log('Connected to MongoDB successfully'))
+  .catch((err) => console.error('Error connecting to MongoDB:', err));
 
 // GraphQL Middleware
 app.use(
@@ -156,7 +159,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // });
 
 // Start Express Server
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
