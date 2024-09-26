@@ -1,0 +1,23 @@
+{
+  "name": "node-js-graphql",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.3"
+  },
+  "scripts": {
+    "start": "node ./src/main.js",
+    "dev": "nodemon ./src/main.js"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/graphql": "^14.5.0",
+    "@types/mongoose": "^5.11.97",
+    "nodemon": "^3.1.7"
+  }
+}
