@@ -78,21 +78,13 @@ The server will start on [http://localhost:4000](http://localhost:4000).
 ```bash
 
 sse-global-chat-app/
-
 ├──  public/  # Frontend assets
-
 │  ├──  index.html  # Chat UI
-
 │  └──  main.js  # Client-side JS (SSE)
-
 ├──  server.js  # Express server with SSE implementation
-
 ├──  .env.example  # Example environment variables
-
 ├──  .env  # Your environment configuration
-
 ├──  package.json  # NPM dependencies and scripts
-
 └──  README.md  # Project documentation
 ```
 
