@@ -37,20 +37,20 @@ git clone https://github.com/your-username/sse-global-chat-app.git
 cd sse-global-chat-app
 ```
 
-2. Install the dependencies:
+1. Install the dependencies:
 
 ```bash
 npm install
 ```
 
-3. Set up environment variables:
+2. Set up environment variables:
    Rename the .env.example file to .env:
 
 ```bash
 cp  .env.example  .env
 ```
 
-4.  Open the .env file and configure the environment variables as needed. Example:
+3. Open the .env file and configure the environment variables as needed. Example:
 
 ```bash
 NODE_ENV=development
@@ -59,17 +59,17 @@ PORT=4000
 ORIGIN=http://localhost:4000
 ```
 
-5.  Start the server:
+4. Start the server:
 
 ```bash
 npm start
 ```
 
-The server will start on http://localhost:4000.
+The server will start on [http://localhost:4000](http://localhost:4000).
 
 ## Usage
 
-- Open the app in your browser by navigating to http://localhost:3000.
+- Open the app in your browser by navigating to [http://localhost:4000](http://localhost:4000).
 
 - Enter a username and start chatting! All users will see messages in real-time.
 
@@ -98,13 +98,13 @@ sse-global-chat-app/
 
 ## How It Works
 
-1.  **Server Setup**: The server is set up using Express.js. It creates a single SSE endpoint (`/events`) for clients to connect.
+1.**Server Setup**: The server is set up using Express.js. It creates a single SSE endpoint (`/events`) for clients to connect.
 
-2.  **Client Connection**: When a client connects to the server, it listens for new messages using the a graphql endpoint.
+2.**Client Connection**: When a client connects to the server, it listens for new messages using the a graphql endpoint.
 
-3.  **Broadcasting Messages**: When a new message is sent by a client, the server broadcasts it to all connected clients using the SSE connection.
+3.**Broadcasting Messages**: When a new message is sent by a client, the server broadcasts it to all connected clients using the SSE connection.
 
-4.  **Real-time Updates**: All clients receive the new message in real-time and display it on the chat interface.\
+4.**Real-time Updates**: All clients receive the new message in real-time and display it on the chat interface.\
 
 ## Contributing
 
@@ -125,7 +125,3 @@ Open a pull request
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 This version includes the step for adding the `.env` file from the `.env.example`. Let me know if you need further adjustments!
-
-```
-
-```
